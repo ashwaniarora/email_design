@@ -82,18 +82,71 @@
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
         style="min-width:768px; max-width:992px; background-color:#333333;margin: auto; border-radius: 10px;">
         <tr>
-            <td style="color: white;" align="center">
-                <img style="margin-top:50px;border-radius: 7px;" src="Images/Logo.png" alt="Logo" width="50px">
-                <b style="position: relative; bottom: 15px;color: white;">Flexnest</b>
-                <p style="margin-bottom: 40px;font-size: 30px;">Raunaq23's month in review</p>
-                <b style="font-size: 25px;">SEPTEMBER 2021<br><br><br></b>
+            <td style="color: white;" align="center" id="month_review">
+
             </td>
         </tr>
         <tr>
             <td>
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
-                    style="background-color:black;margin:15px 15px 0 15px;border-radius: 10px;min-width: 738px;max-width: 962px;color: white;">
-                    <tr>
+                    style="background-color:black;margin:15px 15px 0 15px;border-radius: 10px;min-width: 738px;max-width: 962px;color: white;" id="workout">
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
+                    style="background-color:black;margin:15px 15px 0 15px;border-radius: 10px;min-width: 738px;max-width: 962px;" id="your_monthly_achivements">
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
+                    style="background-color:black;margin:15px 15px 0 15px;border-radius: 10px;min-width: 738px;max-width: 962px;" id="your_monthly_stats">
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
+                    style="background-color:black;margin:15px;border-radius: 10px; min-width: 738px; max-width: 962px;" id="community_highlight">
+
+                </table>
+            </td>
+        </tr>
+    </table>
+	<script>	
+		let monthReview= document.getElementById("month_review");
+		let workout= document.getElementById("workout");
+		let yourMonthlyAchivements= document.getElementById("your_monthly_achivements");
+		let yourMonthlyStats= document.getElementById("your_monthly_stats");
+		let communityHighlight= document.getElementById("community_highlight");
+		
+		monthReview.innerHTML= monthReviewWork();
+		workout.innerHTML= workoutWork();
+		yourMonthlyAchivements.innerHTML= yourMonthlyAchivementsWork();
+		yourMonthlyStats.innerHTML= yourMonthlyStatsWork();
+		communityHighlight.innerHTML= communityHighlightWork();
+
+		
+		
+		function monthReviewWork(){
+			
+			let monthReviewContent=`                <img style="margin-top:50px;border-radius: 7px;" src="Images/Logo.png" alt="Logo" width="50px">
+                <b style="position: relative; bottom: 15px;color: white;">Flexnest</b>
+                <p style="margin-bottom: 40px;font-size: 30px;">Raunaq23's month in review</p>
+                <b style="font-size: 25px;">SEPTEMBER 2021<br><br><br></b>`;
+			
+			return monthReviewContent;
+		}
+		
+		function workoutWork(){
+		
+		let workoutContent=`                    <tr>
                         <td>
                             <p style="color: white;font-size: 30px; margin:70px 0 0 0;" align="center">You Worked Out
                                 With Us</p>
@@ -198,15 +251,15 @@
                             <span style="font-size: 20px;">This is 2 fewer days than last month</span>
                             <p><br><br></p>
                         </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
-                    style="background-color:black;margin:15px 15px 0 15px;border-radius: 10px;min-width: 738px;max-width: 962px;">
-                    <tr>
+                    </tr>`;
+		
+		return workoutContent;
+		}
+	
+	
+		function yourMonthlyAchivementsWork(){
+		
+		let yourMonthlyAchivementsContent= `                    <tr>
                         <td>
                             <p style="color: white;font-size: 30px; margin:70px 0 0 0;" align="center">Your Monthly</p>
                             <p style="color: white;font-size: 30px; margin:0 0 50px 0;" align="center">Achivements</p>
@@ -234,15 +287,15 @@
                             <br>
                             <br>
                         </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
-                    style="background-color:black;margin:15px 15px 0 15px;border-radius: 10px;min-width: 738px;max-width: 962px;">
-                    <tr>
+                    </tr>`;
+		
+		return yourMonthlyAchivementsContent;
+		}
+	
+	
+		function yourMonthlyStatsWork(){
+		
+			let yourMonthlyStatsContent=`                    <tr>
                         <td>
                             <p style="color: white;font-size: 30px; margin:70px 0 50px 0;" align="center">Your Monthly
                                 Stats</p>
@@ -439,15 +492,14 @@
                         <td>
                             <p style="margin:0 50px 0 50px"><br><br></p>
                         </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
-                    style="background-color:black;margin:15px;border-radius: 10px; min-width: 738px; max-width: 962px;">
-                    <tr>
+                    </tr>`;
+		
+			return yourMonthlyStatsContent;
+		}
+	
+		function communityHighlightWork()
+		{
+			let communityHighlightContent= `                    <tr>
                         <td>
                             <p style="color: white;font-size: 30px; margin: 70px 0 30px 0;" align="center">Community
                                 Highlights</p>
@@ -475,11 +527,10 @@
                             <br>
                             <br>
                         </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                    </tr>`;
+			return communityHighlightContent;
+		}
+	</script>
 </body>
 
 </html>
